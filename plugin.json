@@ -1,0 +1,77 @@
+{
+  "id": "monkey-creations.ytmd-controller",
+  "name": "YTMD Controller",
+  "version": "1.0.0",
+  "apiVersion": 1,
+  "description": "Control YouTube Music Desktop App (YTMD) from the topbar: see what is playing, play, pause, skip, seek, like, shuffle, repeat, change the volume and pick a song from Up next.",
+  "author": { "name": "Monkey Creations", "url": "https://github.com/timh8127" },
+  "homepage": "https://github.com/timh8127/alpine-ytmd-controller",
+  "repository": "https://github.com/timh8127/alpine-ytmd-controller",
+  "license": "MIT",
+  "icon": "assets/icon.png",
+  "renderer": "index.js",
+  "main": "backend.js",
+  "engines": { "alpineShell": ">=1.0.0" },
+  "contributes": {
+    "topbarWidgets": [{ "slot": "right", "order": 0 }],
+    "settings": [
+      {
+        "key": "trackText",
+        "type": "select",
+        "label": "Track in the topbar",
+        "default": "title-artist",
+        "options": [
+          { "value": "title-artist", "label": "Title and artist" },
+          { "value": "title", "label": "Title only" },
+          { "value": "none", "label": "Hidden" }
+        ]
+      },
+      {
+        "key": "textWidth",
+        "type": "slider",
+        "label": "Track width",
+        "info": "Longer titles are cut off at this width.",
+        "default": 180,
+        "min": 80,
+        "max": 400,
+        "step": 10,
+        "unit": "px"
+      },
+      { "key": "showArtwork", "type": "toggle", "label": "Show album art in the topbar", "default": true },
+      {
+        "key": "topbarButtons",
+        "type": "select",
+        "label": "Buttons in the topbar",
+        "default": "all",
+        "options": [
+          { "value": "all", "label": "Previous, play/pause and next" },
+          { "value": "play", "label": "Play/pause only" },
+          { "value": "none", "label": "None" }
+        ]
+      },
+      {
+        "key": "scrollVolume",
+        "type": "toggle",
+        "label": "Scroll over the widget to change the volume",
+        "default": true
+      },
+      { "key": "showUpNext", "type": "toggle", "label": "Show Up next in the popup", "default": true },
+      {
+        "key": "hideWhenClosed",
+        "type": "toggle",
+        "label": "Hide the widget while YTMD is closed",
+        "info": "It comes back as soon as YouTube Music Desktop is running.",
+        "default": false
+      }
+    ],
+    "settingsPages": [{ "label": "YTMD Controller", "export": "SettingsPage" }]
+  },
+  "marketplace": {
+    "displayName": "YTMD Controller",
+    "shortDescription": "Now playing and full playback control for YouTube Music Desktop App (YTMD), right in your topbar.",
+    "readme": "README.md",
+    "logo": "assets/icon.png",
+    "category": "media",
+    "keywords": ["ytmd", "youtube music", "youtube music desktop", "music", "media", "now playing", "player", "controls"]
+  }
+}

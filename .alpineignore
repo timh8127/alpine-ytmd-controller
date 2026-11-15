@@ -1,0 +1,4 @@
+# Not shipped with the plugin (same syntax as .gitignore, without "!")
+.*
+AGENTS.md
+docs/
