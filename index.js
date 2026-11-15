@@ -253,7 +253,7 @@ function TrackSummary({ player, showArtwork, trackText, textWidth, buttons }) {
       ${showArtwork && html`<${Artwork} url=${track.artwork} size=${16} radius=${3} />`}
       ${showText &&
       html`
-        <span style=${{ ...ellipsis, maxWidth: textWidth + 'px', opacity: playing ? 1 : 0.65 }} title=${track.title + (track.author ? ' - ' + track.author : '')}>
+        <span style=${{ ...ellipsis, maxWidth: textWidth + 'px', opacity: playing ? 1 : 0.65 }}>
           <span style=${{ fontWeight: 500 }}>${track.title}</span>
           ${trackText === 'title-artist' && track.author && html`<span style=${{ opacity: 0.6 }}>${' · ' + track.author}</span>`}
         </span>

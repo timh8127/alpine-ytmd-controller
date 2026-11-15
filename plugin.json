@@ -1,9 +1,9 @@
 {
   "id": "monkey-creations.ytmd-controller",
   "name": "YTMD Controller",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "apiVersion": 1,
-  "description": "Control YouTube Music Desktop App (YTMD) from the topbar: see what is playing, play, pause, skip, seek, like, shuffle, repeat, change the volume and pick a song from Up next.",
+  "description": "Control YouTube Music Desktop App (YTMD) from Ridge: see what is playing, play, pause, skip, seek, like, shuffle, repeat, change the volume and pick a song from Up next.",
   "author": { "name": "Monkey Creations", "url": "https://github.com/timh8127" },
   "homepage": "https://github.com/timh8127/alpine-ytmd-controller",
   "repository": "https://github.com/timh8127/alpine-ytmd-controller",
@@ -18,7 +18,7 @@
       {
         "key": "trackText",
         "type": "select",
-        "label": "Track in the topbar",
+        "label": "Track on Ridge",
         "default": "title-artist",
         "options": [
           { "value": "title-artist", "label": "Title and artist" },
@@ -37,11 +37,11 @@
         "step": 10,
         "unit": "px"
       },
-      { "key": "showArtwork", "type": "toggle", "label": "Show album art in the topbar", "default": true },
+      { "key": "showArtwork", "type": "toggle", "label": "Show album art on Ridge", "default": true },
       {
         "key": "topbarButtons",
         "type": "select",
-        "label": "Buttons in the topbar",
+        "label": "Buttons on Ridge",
         "default": "all",
         "options": [
           { "value": "all", "label": "Previous, play/pause and next" },
@@ -68,7 +68,7 @@
   },
   "marketplace": {
     "displayName": "YTMD Controller",
-    "shortDescription": "Now playing and full playback control for YouTube Music Desktop App (YTMD), right in your topbar.",
+    "shortDescription": "Now playing and full playback control for YouTube Music Desktop App (YTMD), right on Ridge.",
     "readme": "README.md",
     "logo": "assets/icon.png",
     "category": "media",
